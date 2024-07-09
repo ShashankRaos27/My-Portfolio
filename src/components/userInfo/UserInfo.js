@@ -1,19 +1,32 @@
-import React from "react";
-import Lottie from "lottie-react";
-import developerImage from "../../assets/images/developerImage.json";
-import manSittingWithLaptop from "../../assets/images/manSittingWithLaptop.json"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faGithub,
-  faLinkedinIn,
-  faFacebookF,
-  faMedium,
-  faStackOverflow,
+    faAws,
+    faCss3Alt,
+    faDocker,
+    faFacebookF,
+    faGithub,
+    faGitlab,
+    faHtml5,
+    faJs,
+    faLinkedinIn,
+    faNode,
+    faNpm,
+    faPython,
+    faReact,
+    faSass,
+    faStackOverflow,
+    faSwift
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGitlab } from "@fortawesome/free-brands-svg-icons";
+import {
+    faEnvelope,
+    faFireAlt,
+    faDatabase as faSolidDatabase,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Lottie from "lottie-react";
+import React from "react";
+import developerImage from "../../assets/images/developerImage.json";
+import manSittingWithLaptop from "../../assets/images/manSittingWithLaptop.json";
 import "./UserInfo.css";
-import { Button } from "antd";
 const UserInfo = () => {
   return (
     <div className="w-[90%] p-5 py-2.5 px-5 mx-auto mt-8">
@@ -83,7 +96,68 @@ const UserInfo = () => {
           <Lottie animationData={developerImage} />
         </div>
       </div>
-      <Lottie animationData={manSittingWithLaptop} />
+      <div className="flex w-full mt-20">
+        <div className="w-[40%]">
+          <Lottie animationData={manSittingWithLaptop} />
+        </div>
+        <div className="w-[60%]">
+          <h1>What I do </h1>
+          <div className="dev-icons">
+            <div className="inline-block mr-5 mb-5" name="html-5">
+              <FontAwesomeIcon icon={faHtml5} className="mb-5"/>
+              <p>HTML5</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="css3">
+              <FontAwesomeIcon icon={faCss3Alt} className="mb-5"/>
+              <p>CSS3</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="sass">
+              <FontAwesomeIcon icon={faSass} className="mb-5"/>
+              <p>Sass</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="JavaScript">
+              <FontAwesomeIcon icon={faJs} className="mb-5"/>
+              <p>JavaScript</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="reactjs">
+              <FontAwesomeIcon icon={faReact} className="mb-5"/>
+              <p>React.js</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="nodejs">
+              <FontAwesomeIcon icon={faNode} className="mb-5"/>
+              <p>Node.js</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="swift">
+              <FontAwesomeIcon icon={faSwift} className="mb-5"/>
+              <p>Swift</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="npm">
+              <FontAwesomeIcon icon={faNpm} className="mb-5"/>
+              <p>NPM</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="sql-database">
+              <FontAwesomeIcon icon={faSolidDatabase} className="mb-5"/>
+              <p>SQL Database</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="aws">
+              <FontAwesomeIcon icon={faAws} className="mb-5"/>
+              <p>AWS</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="firebase">
+              <FontAwesomeIcon icon={faFireAlt} className="mb-5"/>
+              <p>Firebase</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="python">
+              <FontAwesomeIcon icon={faPython} className="mb-5"/>
+              <p>Python</p>
+            </div>
+            <div className="inline-block mr-5 mb-5" name="docker">
+              <FontAwesomeIcon icon={faDocker} className="mb-5"/>
+              <p>Docker</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

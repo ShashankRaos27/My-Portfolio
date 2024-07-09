@@ -59,3 +59,11 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
 }
+.dev-icons {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}

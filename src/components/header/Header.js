@@ -36,7 +36,7 @@ const Header = () => {
           <a href="#contact">Contact Me</a>
         </div>
         <div className="py-4 px-5">
-          <a>
+          {/* <a>
             <label class="switch">
               <input type="checkbox" />
               <span class="sdivder round">
@@ -50,7 +50,7 @@ const Header = () => {
                 </span>
               </span>
             </label>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
