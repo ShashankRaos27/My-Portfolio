@@ -27,7 +27,13 @@
 .App-link {
   color: #61dafb;
 }
-
+.handWave {
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 90% 90%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
