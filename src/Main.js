@@ -4,7 +4,7 @@ import UserInfo from "./components/userInfo/UserInfo";
 
 const Main = () => {
   return (
-    <div className="h-90vh">
+    <div className="dark:bg-gray-900">
       <Header />
       <UserInfo />
     </div>
