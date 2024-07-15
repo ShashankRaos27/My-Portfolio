@@ -1,10 +1,27 @@
-import React, { useState, useEffect } from "react";
+import { MoonOutlined, SunOutlined } from "@ant-design/icons";
 import { Switch } from "antd";
-import { SunOutlined, MoonOutlined } from "@ant-design/icons";
+import React, { useEffect, useRef, useState } from "react";
+import { Events, Link, scrollSpy } from "react-scroll";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -14,8 +31,21 @@ const Header = () => {
     }
   }, [isDarkMode]);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function () {});
+
+    Events.scrollEvent.register("end", function () {});
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
+  const toggleMobileMenu = (visible) => {
+    setIsMobileMenuOpen(visible);
   };
 
   const toggleDarkMode = () => {
@@ -24,7 +54,10 @@ const Header = () => {
 
   return (
     <div
-      className={`md:static fixed top-0 left-0 w-full z-20 bg-white dark:bg-darkBackground shadow-md`}
+      ref={headerRef}
+      className={`fixed top-0 left-0 w-full z-20 bg-white dark:bg-darkBackground shadow-md transition-all duration-300 ${
+        visible ? "" : "-translate-y-full"
+      }`}
     >
       <div className="flex justify-between items-center py-4 px-5">
         <div>
@@ -35,35 +68,88 @@ const Header = () => {
           </a>
         </div>
         <div className="hidden md:flex flex-wrap items-center gap-5">
-          <div className="py-4 px-5">
-            <a href="#skills" className="dark:text-white">
+          <div
+            className={`py-4 px-5 ${activeLink === "home" ? "font-bold" : ""}`}
+          >
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onSetActive={() => setActiveLink("home")}
+              className="dark:text-white cursor-pointer"
+            >
+              Home
+            </Link>
+          </div>
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "skills" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={() => setActiveLink("skills")}
+              className="dark:text-white cursor-pointer"
+            >
               Skills
-            </a>
+            </Link>
+          </div>{" "}
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "proficiency" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="proficiency"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onSetActive={() => setActiveLink("proficiency")}
+              className="dark:text-white cursor-pointer"
+            >
+              Proficiency
+            </Link>
           </div>
-          <div className="py-4 px-5">
-            <a href="#experience" className="dark:text-white">
-              Work Experiences
-            </a>
-          </div>
-          <div className="py-4 px-5">
-            <a href="#opensource" className="dark:text-white">
-              Open Source
-            </a>
-          </div>
-          <div className="py-4 px-5">
-            <a href="#achievements" className="dark:text-white">
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "education" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onSetActive={() => setActiveLink("education")}
+              className="dark:text-white cursor-pointer"
+            >
               Education
-            </a>
+            </Link>
           </div>
-          <div className="py-4 px-5">
-            <a href="#resume" className="dark:text-white">
-              Resume
-            </a>
-          </div>
-          <div className="py-4 px-5">
-            <a href="#contact" className="dark:text-white">
-              Contact Me
-            </a>
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "experience" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onSetActive={() => setActiveLink("experience")}
+              className="dark:text-white cursor-pointer"
+            >
+              Work Experiences
+            </Link>
           </div>
           <div>
             <Switch
@@ -75,7 +161,10 @@ const Header = () => {
           </div>
         </div>
         <div className="md:hidden flex items-center">
-          <button onClick={toggleMobileMenu} className="focus:outline-none">
+          <button
+            onClick={() => toggleMobileMenu(true)}
+            className="focus:outline-none"
+          >
             <svg
               className="w-6 h-6 dark:text-white"
               fill="none"
@@ -100,7 +189,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden fixed top-0 left-0 w-full h-full bg-white dark:bg-darkBackground z-10 flex flex-col items-center justify-center">
           <button
-            onClick={toggleMobileMenu}
+            onClick={() => toggleMobileMenu(false)}
             className="absolute top-4 right-4 focus:outline-none"
           >
             <svg
@@ -118,60 +207,103 @@ const Header = () => {
               ></path>
             </svg>
           </button>
-          <div className="py-4 px-5">
-            <a
-              href="#skills"
-              onClick={toggleMobileMenu}
-              className="dark:text-white"
+          <div
+            className={`py-4 px-5 ${activeLink === "home" ? "font-bold" : ""}`}
+          >
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={() => {
+                setActiveLink("home");
+              }}
+              onClick={() => toggleMobileMenu(false)}
+              className="dark:text-white cursor-pointer"
+            >
+              Home
+            </Link>
+          </div>
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "skills" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={() => {
+                setActiveLink("skills");
+              }}
+              onClick={() => toggleMobileMenu(false)}
+              className="dark:text-white cursor-pointer"
             >
               Skills
-            </a>
+            </Link>
           </div>
-          <div className="py-4 px-5">
-            <a
-              href="#experience"
-              onClick={toggleMobileMenu}
-              className="dark:text-white"
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "proficiency" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="proficiency"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onSetActive={() => setActiveLink("proficiency")}
+              className="dark:text-white cursor-pointer"
+              onClick={() => toggleMobileMenu(false)}
             >
-              Work Experiences
-            </a>
+              Proficiency
+            </Link>
           </div>
-          <div className="py-4 px-5">
-            <a
-              href="#opensource"
-              onClick={toggleMobileMenu}
-              className="dark:text-white"
-            >
-              Open Source
-            </a>
-          </div>
-          <div className="py-4 px-5">
-            <a
-              href="#achievements"
-              onClick={toggleMobileMenu}
-              className="dark:text-white"
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "education" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={() => {
+                setActiveLink("education");
+              }}
+              onClick={() => toggleMobileMenu(false)}
+              className="dark:text-white cursor-pointer"
             >
               Education
-            </a>
+            </Link>
           </div>
-          <div className="py-4 px-5">
-            <a
-              href="#resume"
-              onClick={toggleMobileMenu}
-              className="dark:text-white"
+          <div
+            className={`py-4 px-5 ${
+              activeLink === "experience" ? "font-bold" : ""
+            }`}
+          >
+            <Link
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={() => {
+                setActiveLink("experience");
+              }}
+              onClick={() => toggleMobileMenu(false)}
+              className="dark:text-white cursor-pointer"
             >
-              Resume
-            </a>
+              Work Experiences
+            </Link>
           </div>
-          <div className="py-4 px-5">
-            <a
-              href="#contact"
-              onClick={toggleMobileMenu}
-              className="dark:text-white"
-            >
-              Contact Me
-            </a>
-          </div>
+
           <div>
             <Switch
               checked={isDarkMode}
