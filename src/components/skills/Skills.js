@@ -29,7 +29,7 @@ const Skills = () => {
         <div className="w-full md:w-[50%]">
           <Lottie animationData={manSittingWithLaptop} />
         </div>
-        <div className="w-full md:w-[50%] ml-5">
+        <div className="w-full md:w-[50%] ">
           <h1 className="text-[56px] font-normal my-10 dark:text-white text-center md:text-start">
             What I do{" "}
           </h1>
@@ -55,27 +55,6 @@ const Skills = () => {
                 CSS3
               </p>
             </div>
-            <div className="inline-block mr-5 mb-5 group" name="css3">
-              <FontAwesomeIcon
-                icon={faCss3Alt}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Tailwind css
-              </p>
-            </div>
-            <div className="inline-block mr-5 mb-5 group" name="css3">
-              <DatabaseOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Redux
-              </p>
-            </div>
-            <div className="inline-block mr-5 mb-5 group" name="css3">
-              <AntDesignOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                antdesign
-              </p>
-            </div>
             <div className="inline-block mr-5 mb-5 group" name="sass">
               <FontAwesomeIcon
                 icon={faSass}
@@ -85,13 +64,49 @@ const Skills = () => {
                 Sass
               </p>
             </div>
-            <div className="inline-block mr-5 mb-5 group" name="JavaScript">
+            <div className="inline-block mr-5 mb-5 group" name="css3">
+              <DatabaseOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
+              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                Redux
+              </p>
+            </div>{" "}
+            <div className="inline-block mr-5 mb-5 group" name="swift">
+              <GithubOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
+              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                GitHub
+              </p>
+            </div>
+            <div className="inline-block mr-5 mb-5 group" name="npm">
               <FontAwesomeIcon
-                icon={faJs}
+                icon={faNpm}
                 className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
               />
               <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                JavaScript
+                NPM
+              </p>
+            </div>
+            <div className="inline-block mr-5 mb-5 group" name="aws">
+              <FontAwesomeIcon
+                icon={faServer}
+                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+              />
+              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                API
+              </p>
+            </div>
+            <div className="inline-block mr-5 mb-5 group" name="firebase">
+              <FontAwesomeIcon
+                icon={faGlobe}
+                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+              />
+              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                Netlify
+              </p>
+            </div>
+            <div className="inline-block mr-5 mb-5 group" name="css3">
+              <AntDesignOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
+              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                antdesign
               </p>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="reactjs">
@@ -112,19 +127,22 @@ const Skills = () => {
                 Node.js
               </p>
             </div>
-            <div className="inline-block mr-5 mb-5 group" name="swift">
-              <GithubOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                GitHub
-              </p>
-            </div>
-            <div className="inline-block mr-5 mb-5 group" name="npm">
+            <div className="inline-block mr-5 mb-5 group" name="css3">
               <FontAwesomeIcon
-                icon={faNpm}
+                icon={faCss3Alt}
                 className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
               />
               <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                NPM
+                Tailwind css
+              </p>
+            </div>
+            <div className="inline-block mr-5 mb-5 group" name="JavaScript">
+              <FontAwesomeIcon
+                icon={faJs}
+                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+              />
+              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                JavaScript
               </p>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="sql-database">
@@ -134,24 +152,6 @@ const Skills = () => {
               />
               <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
                 SQL Database
-              </p>
-            </div>
-            <div className="inline-block mr-5 mb-5 group" name="aws">
-              <FontAwesomeIcon
-                icon={faServer}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                API
-              </p>
-            </div>
-            <div className="inline-block mr-5 mb-5 group" name="firebase">
-              <FontAwesomeIcon
-                icon={faGlobe}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Netlify
               </p>
             </div>
           </div>

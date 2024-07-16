@@ -18,7 +18,7 @@ const Proficiency = () => {
             </p>
             <div className="meter bg-gray-200 rounded-full h-5 relative">
               <span
-                className="block bg-[#AAA5FF] h-full rounded-full"
+                className="block bg-[#1063C4] h-full rounded-full"
                 style={{ width: "90%" }}
               ></span>
             </div>
@@ -27,7 +27,7 @@ const Proficiency = () => {
             <p className="my-5 text-[#676767] dark:text-white">Programming</p>
             <div className="meter bg-gray-200 rounded-full h-5 relative">
               <span
-                className="block bg-[#AAA5FF] h-full rounded-full"
+                className="block bg-[#1063C4] h-full rounded-full"
                 style={{ width: "70%" }}
               ></span>
             </div>
@@ -36,7 +36,7 @@ const Proficiency = () => {
             <p className="my-5 text-[#676767] dark:text-white">Backend</p>
             <div className="meter bg-gray-200 rounded-full h-5 relative">
               <span
-                className="block bg-[#AAA5FF] h-full rounded-full"
+                className="block bg-[#1063C4] h-full rounded-full"
                 style={{ width: "40%" }}
               ></span>
             </div>
