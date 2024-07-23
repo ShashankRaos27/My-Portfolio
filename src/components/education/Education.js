@@ -17,7 +17,7 @@ const Education = () => {
             <img
               src={jnnceLogo}
               alt="jnnce"
-              className="rounded-3xl w-24 h-24 shadow-2xl "
+              className="rounded-3xl w-24 h-24 shadow-2xl hover:animate-flip transition duration-1000 "
             />
           </div>
           <div className="text-center md:text-left">

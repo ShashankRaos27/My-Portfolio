@@ -38,121 +38,149 @@ const Skills = () => {
           </p>
           <div className="dev-icons">
             <div className="inline-block mr-5 mb-5 group" name="html-5">
-              <FontAwesomeIcon
-                icon={faHtml5}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                html-5
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faHtml5}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  html-5
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="css3">
-              <FontAwesomeIcon
-                icon={faCss3Alt}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                CSS3
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faCss3Alt}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  CSS3
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="sass">
-              <FontAwesomeIcon
-                icon={faSass}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Sass
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faSass}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  Sass
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="css3">
-              <DatabaseOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Redux
-              </p>
-            </div>{" "}
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <DatabaseOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  Redux
+                </p>
+              </div>
+            </div>
             <div className="inline-block mr-5 mb-5 group" name="swift">
-              <GithubOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                GitHub
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <GithubOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  GitHub
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="npm">
-              <FontAwesomeIcon
-                icon={faNpm}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                NPM
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faNpm}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  NPM
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="aws">
-              <FontAwesomeIcon
-                icon={faServer}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                API
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faServer}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  API
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="firebase">
-              <FontAwesomeIcon
-                icon={faGlobe}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Netlify
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faGlobe}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  Netlify
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="css3">
-              <AntDesignOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                antdesign
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <AntDesignOutlined className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]" />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  antdesign
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="reactjs">
-              <FontAwesomeIcon
-                icon={faReact}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                React.js
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faReact}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  React.js
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="nodejs">
-              <FontAwesomeIcon
-                icon={faNode}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Node.js
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faNode}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  Node.js
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="css3">
-              <FontAwesomeIcon
-                icon={faCss3Alt}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                Tailwind css
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faCss3Alt}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  Tailwind css
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="JavaScript">
-              <FontAwesomeIcon
-                icon={faJs}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                JavaScript
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faJs}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  JavaScript
+                </p>
+              </div>
             </div>
             <div className="inline-block mr-5 mb-5 group" name="sql-database">
-              <FontAwesomeIcon
-                icon={faSolidDatabase}
-                className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
-              />
-              <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
-                SQL Database
-              </p>
+              <div className="flip-container group-hover:animate-flip transition duration-500">
+                <FontAwesomeIcon
+                  icon={faSolidDatabase}
+                  className="mb-2 text-[#868e96] dark:text-white group-hover:text-[#407AFF]"
+                />
+                <p className="text-base text-[#868e96] dark:text-white group-hover:text-[#407AFF]">
+                  SQL Database
+                </p>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-2 mt-5">
