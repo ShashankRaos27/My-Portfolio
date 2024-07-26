@@ -1,6 +1,15 @@
 import { faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import {
+  faFacebookF,
+  faGithub,
+  faGitlab,
+  faLinkedinIn,
+  faStackOverflow,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import "../userInfo/UserInfo.css";
 
 const Contact = () => {
   return (
@@ -24,6 +33,32 @@ const Contact = () => {
           <p className="text-base dark:text-white">
             Open for opportunities: Yes
           </p>
+          <div className="social-icons mt-5">
+            <a href="https://github.com/ShashankRaos27" className="icon github">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shashank-rao-s-3058b5195/"
+              className="icon linkedin"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a
+              href="mailto:shashankrao2708@gmail.com"
+              className="icon envelope"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+            <a href="https://gitlab.com" className="icon gitlab">
+              <FontAwesomeIcon icon={faGitlab} />
+            </a>
+            <a href="https://facebook.com" className="icon facebook">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href="https://stackoverflow.com" className="icon stackoverflow">
+              <FontAwesomeIcon icon={faStackOverflow} />
+            </a>
+          </div>
         </div>
         <div className="w-full md:w-[50%] flex justify-center md:justify-end mt-5 md:mt-0">
           <div className="rounded-full border-4 border-blue-500 overflow-hidden w-60 h-60">

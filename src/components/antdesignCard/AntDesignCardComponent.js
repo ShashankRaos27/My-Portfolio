@@ -7,7 +7,7 @@ const AntDesignCardComponent = () => {
     <div>
       <Card
         hoverable
-        style={{ width: 300, borderRadius: 10, overflow: "hidden" }}
+        style={{ width: 500, borderRadius: 10, overflow: "hidden" }}
         cover={
           <div
             className="text-center"
